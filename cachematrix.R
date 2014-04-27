@@ -5,6 +5,27 @@
 
 makeCacheMatrix <- function(x = matrix()) {
 
+  #initialize inverse of matrix
+  oMatrixInverse <- NULL
+  
+  #define a function for setting the given matrix and its inverse to global environment
+  set <- function(y){
+    oMatrix <<- y
+    oMatrixInverse <<- NULL
+  }
+  
+  #define a function for getting the matrix
+  get <- function() oMatrix
+  
+  #define a function for setting the inverse of matrix
+  setMatrixInverse <- function(x) {
+    oMatrixInverse <<- x
+  }
+  
+  #define a function for getting the inverse of matrix
+  getMatrixInverse <- function() oMatrixInverse
+  
+  list(set=set, get=get, setMatrixInverse=setMatrixInverse, getMatrixInverse=getMatrixInverse)
 }
 
 
@@ -12,4 +33,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+  
+
+  
+  
 }
